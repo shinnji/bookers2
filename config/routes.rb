@@ -5,6 +5,6 @@ root to: 'homes#top'
 resources :books
 resources :users
 get "home/about" => "homes#about" 
+resources :users, only: [:show]
 end
-
 
