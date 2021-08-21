@@ -53,19 +53,10 @@
             <% end %>
           </td>
           <td>
-            <span><%= book.title %></span>
+            <span><%= link_to book.title,book_path(book.id) %></span>
             <span><%= book.body %></span>
           </td>
-          <td>
-            <%= link_to "edit",edit_book_path(book) %>
-          </td>
-          <td>
-            <% if @user == current_user %>
-            <div class = "btn btn-sm btn-block mb-3 Destroy">
-              <%= link_to "Destroy", book_path(book), method: :delete %>
-            <% end %>
-            </div>
-          </td>
+      
         </tr>
         <% end %>
       </tbody>
